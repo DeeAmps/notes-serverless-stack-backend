@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "test": "sst test",
-    "start": "sst start",
-    "build": "sst build",
-    "deploy": "sst deploy",
-    "remove": "sst remove"
+    "test": "AWS_PROFILE=iamadmin-general sst test",
+    "start": "AWS_PROFILE=iamadmin-general sst start",
+    "build": "AWS_PROFILE=iamadmin-general sst build",
+    "deploy": "AWS_PROFILE=iamadmin-general sst deploy",
+    "remove": "AWS_PROFILE=iamadmin-general sst remove"
   },
   "eslintConfig": {
     "extends": ["serverless-stack"]

@@ -4,8 +4,9 @@ export default class MyStack extends sst.Stack {
   constructor(scope, id, props) {
     super(scope, id, props);
 
-    // Create a HTTP API
-    new sst.Table(this, "Notes", {
+    this.bucket = new sst.Bucket(this, "Uploads")
+
+    this.table = new sst.Table(this, "Notes", {
       fields: {
         userId: sst.TableFieldType.STRING,
         notesId: sst.TableFieldType.STRING
